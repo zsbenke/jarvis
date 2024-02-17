@@ -31,31 +31,26 @@ body {
   0% {
     --jarvis-gradient-left-position: 12.5%;
     --jarvis-gradient-top-position: 26.25%;
-    --jarvis-gradient-size: 99.26%;
   }
 
   25% {
     --jarvis-gradient-left-position: 50%;
-    --jarvis-gradient-top-position: 26.25%;
-    --jarvis-gradient-size: 99.26%;
+    --jarvis-gradient-top-position: 36.25%;
   }
 
   50% {
-    --jarvis-gradient-left-position: 90%;
+    --jarvis-gradient-left-position: 87.5%;
     --jarvis-gradient-top-position: 50%;
-    --jarvis-gradient-size: 50%;
   }
 
   75% {
     --jarvis-gradient-left-position: 50%;
-    --jarvis-gradient-top-position: 26.25%;
-    --jarvis-gradient-size: 99.26%;
+    --jarvis-gradient-top-position: 63.75%;
   }
 
   100% {
     --jarvis-gradient-left-position: 12.5%;
     --jarvis-gradient-top-position: 26.25%;
-    --jarvis-gradient-size: 99.26%;
   }
 }
 
@@ -63,31 +58,26 @@ body {
   0% {
     --jarvis-gradient-left-position: 55%;
     --jarvis-gradient-top-position: 8.75%;
-    --jarvis-gradient-size: 77.54%;
   }
 
   25% {
-    --jarvis-gradient-left-position: 50%;
-    --jarvis-gradient-top-position: 26.25%;
-    --jarvis-gradient-size: 77.54%;
+    --jarvis-gradient-left-position: 10%;
+    --jarvis-gradient-top-position: 73.75%;
   }
 
   50% {
     --jarvis-gradient-left-position: 90%;
     --jarvis-gradient-top-position: 50%;
-    --jarvis-gradient-size: 77.54%;
   }
 
   75% {
-    --jarvis-gradient-left-position: 50%;
+    --jarvis-gradient-left-position: 90%;
     --jarvis-gradient-top-position: 26.25%;
-    --jarvis-gradient-size: 77.54%;
   }
 
   100% {
     --jarvis-gradient-left-position: 55%;
     --jarvis-gradient-top-position: 8.75%;
-    --jarvis-gradient-size: 77.54%;
   }
 }
 
@@ -98,12 +88,12 @@ body {
 }
 
 .jarvis-icon__gradient {
-  // position: absolute;
+  position: absolute;
   width: var(--jarvis-icon-size);
   height: var(--jarvis-icon-size);
   background-repeat: no-repeat;
   background-position: center center;
-  animation-duration: 2s;
+  animation-duration: 4s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
@@ -118,7 +108,6 @@ body {
   --jarvis-gradient-size: 99.26%;
   background-image: radial-gradient(var(--jarvis-gradient-size) var(--jarvis-gradient-size) at var(--jarvis-gradient-left-position) var(--jarvis-gradient-top-position), #C247FA 0%, rgba(194, 71, 250, 0.00) 100%);
   animation-name: animateGradientMiddle;
-  animation-duration: 5s;
 }
 
 .jarvis-icon__gradient--foreground {
@@ -127,5 +116,5 @@ body {
   --jarvis-gradient-size: 77.54%;
   background-image: radial-gradient(var(--jarvis-gradient-size) var(--jarvis-gradient-size) at var(--jarvis-gradient-left-position) var(--jarvis-gradient-top-position), #0086FA 0%, rgba(194, 71, 250, 0.00) 100%);
   animation-name: animateGradientForeground;
-  animation-duration: 3s;
+  animation-duration: 4.5s;
 }
