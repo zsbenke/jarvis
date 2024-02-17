@@ -1,0 +1,131 @@
+:root {
+  --jarvis-icon-background: purple;
+  --jarvis-icon-size: 128px;
+  --jarvis-icon-radius: calc(var(--jarvis-icon-size) / 4);
+}
+
+body {
+  margin: 15px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+@property --jarvis-gradient-left-position {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 0%;
+}
+
+@property --jarvis-gradient-top-position {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 0%;
+}
+
+@property --jarvis-gradient-size {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 0%;
+}
+
+@keyframes animateGradientMiddle {
+  0% {
+    --jarvis-gradient-left-position: 12.5%;
+    --jarvis-gradient-top-position: 26.25%;
+    --jarvis-gradient-size: 99.26%;
+  }
+
+  25% {
+    --jarvis-gradient-left-position: 50%;
+    --jarvis-gradient-top-position: 26.25%;
+    --jarvis-gradient-size: 99.26%;
+  }
+
+  50% {
+    --jarvis-gradient-left-position: 90%;
+    --jarvis-gradient-top-position: 50%;
+    --jarvis-gradient-size: 50%;
+  }
+
+  75% {
+    --jarvis-gradient-left-position: 50%;
+    --jarvis-gradient-top-position: 26.25%;
+    --jarvis-gradient-size: 99.26%;
+  }
+
+  100% {
+    --jarvis-gradient-left-position: 12.5%;
+    --jarvis-gradient-top-position: 26.25%;
+    --jarvis-gradient-size: 99.26%;
+  }
+}
+
+@keyframes animateGradientForeground {
+  0% {
+    --jarvis-gradient-left-position: 55%;
+    --jarvis-gradient-top-position: 8.75%;
+    --jarvis-gradient-size: 77.54%;
+  }
+
+  25% {
+    --jarvis-gradient-left-position: 50%;
+    --jarvis-gradient-top-position: 26.25%;
+    --jarvis-gradient-size: 77.54%;
+  }
+
+  50% {
+    --jarvis-gradient-left-position: 90%;
+    --jarvis-gradient-top-position: 50%;
+    --jarvis-gradient-size: 77.54%;
+  }
+
+  75% {
+    --jarvis-gradient-left-position: 50%;
+    --jarvis-gradient-top-position: 26.25%;
+    --jarvis-gradient-size: 77.54%;
+  }
+
+  100% {
+    --jarvis-gradient-left-position: 55%;
+    --jarvis-gradient-top-position: 8.75%;
+    --jarvis-gradient-size: 77.54%;
+  }
+}
+
+.jarvis-icon {
+  width: var(--jarvis-icon-size);
+  height: var(--jarvis-icon-size);
+  border-radius: var(--jarvis-icon-radius);
+}
+
+.jarvis-icon__gradient {
+  // position: absolute;
+  width: var(--jarvis-icon-size);
+  height: var(--jarvis-icon-size);
+  background-repeat: no-repeat;
+  background-position: center center;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.jarvis-icon__gradient--background {
+  background-image: linear-gradient(180deg, #EE312E 0%, #D3222A 100%);
+}
+
+.jarvis-icon__gradient--middle {
+  --jarvis-gradient-left-position: 12.5%;
+  --jarvis-gradient-top-position: 26.25%;
+  --jarvis-gradient-size: 99.26%;
+  background-image: radial-gradient(var(--jarvis-gradient-size) var(--jarvis-gradient-size) at var(--jarvis-gradient-left-position) var(--jarvis-gradient-top-position), #C247FA 0%, rgba(194, 71, 250, 0.00) 100%);
+  animation-name: animateGradientMiddle;
+  animation-duration: 5s;
+}
+
+.jarvis-icon__gradient--foreground {
+  --jarvis-gradient-left-position: 55%;
+  --jarvis-gradient-top-position: 8.75%;
+  --jarvis-gradient-size: 77.54%;
+  background-image: radial-gradient(var(--jarvis-gradient-size) var(--jarvis-gradient-size) at var(--jarvis-gradient-left-position) var(--jarvis-gradient-top-position), #0086FA 0%, rgba(194, 71, 250, 0.00) 100%);
+  animation-name: animateGradientForeground;
+  animation-duration: 3s;
+}
